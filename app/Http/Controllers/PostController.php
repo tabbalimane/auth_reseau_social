@@ -50,7 +50,17 @@ public function update(Request $request, Post $post)
         'content'=>$request->content
     ]);
 
-    return redirect()->back();
+    // ila update mzyan, redirect lpage dyal posts
+    return redirect('/posts')->with('success', 'Post updated successfully!');
+}
+public function edit(Post $post)
+{
+    // check if user owns the post
+    if ($post->user_id != session('user_id')) {
+        abort(403, "You are not allowed to edit this post");
+    }
+
+    return view('posts_edit', compact('post'));
 }
 
 public function destroy(Post $post)
@@ -72,4 +82,5 @@ public function destroy(Post $post)
 
         return response()->json(['success'=>true]);
     }
+
 }

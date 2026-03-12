@@ -11,6 +11,11 @@ Route::post('/login', [AuthController::class,'login']);
 
 Route::get('/logout', [AuthController::class,'logout']);
 
+// page edit
+Route::get('/posts/{post}/edit', [PostController::class, 'edit'])->name('posts.edit');
+
+// update action
+Route::put('/posts/{post}', [PostController::class, 'update'])->name('posts.update');
 Route::middleware(['auth.custom'])->group(function(){
     Route::get('/posts', [PostController::class,'index'])->name('posts.index');
     Route::post('/posts', [PostController::class,'store'])->name('posts.store');

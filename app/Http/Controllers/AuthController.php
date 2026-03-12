@@ -12,7 +12,7 @@ class AuthController extends Controller
         return view('auth.register');
     }
 
-    public function register(Request $request)
+       public function register(Request $request)
 {
     $request->validate([
         'name' => 'required|string|max:255',
@@ -28,8 +28,7 @@ class AuthController extends Controller
 
     session(['user_id' => $user->id]);
 
-    return redirect('/posts');
-}
+    return redirect('/posts');}
 
     public function showLoginForm()
     {
