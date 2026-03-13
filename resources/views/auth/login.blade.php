@@ -8,6 +8,24 @@ body{
     height:100vh;
     margin:0;
 }
+.message {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 15px;
+    color: #333;
+}
+
+.message a {
+    color: #764ba2;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.message a:hover {
+    color: #5a3a8c;
+    text-decoration: underline;
+}
 h2{
     text-align:center;
     color:white;
@@ -59,6 +77,9 @@ button:hover{
 <input type="password" name="password" placeholder="password">
 
 <button type="submit">Login</button>
-<a href="/register" >register</a>
+<p class="message">
+    Pas encore de compte ? 
+    <a href="/register">Inscrivez-vous ici</a>
+</p>
 
 </form>
