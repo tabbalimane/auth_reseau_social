@@ -1,144 +1,134 @@
-<style>/* ===== Body ===== */
-/* ===== Body ===== */
+<style>
+  /* ===== Body ===== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f6f8;
     color: #1f2937;
-    margin: 0;
-    padding: 30px 20px;
+    margin: 10px 8px; /* marges très réduites */
+    padding: 10px 8px;
 }
 
 /* ===== Logout Button ===== */
 .logout-btn {
     display: inline-block;
-    margin-bottom: 25px;
-    padding: 10px 18px;
+    margin-bottom: 10px; /* marge compacte */
+    padding: 6px 12px;
     background-color: #ef4444;
     color: #fff;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 6px;
     font-weight: bold;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
 }
-
 .logout-btn:hover {
     background-color: #dc2626;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 
 /* ===== Headings ===== */
 h2 {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     color: #111827;
-    font-size: 28px;
+    font-size: 24px;
     text-align: center;
 }
 
 /* ===== Form Card ===== */
 .form-card {
     background-color: #fff;
-    padding: 25px 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    margin-bottom: 35px;
-    max-width: 550px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 15px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    margin: 10px auto; /* marge compacte autour du form */
+    max-width: 380px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .form-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.12);
 }
 
 /* Inputs & Textarea */
 .form-card input[type="text"],
 .form-card textarea {
     width: 100%;
-    padding: 12px 14px;
-    margin-bottom: 18px;
+    padding: 7px 10px;
+    margin-bottom: 10px;
     border: 1px solid #d1d5db;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 6px;
+    font-size: 14px;
     color: #1f2937;
-    transition: border-color 0.3s, box-shadow 0.3s;
 }
-
 .form-card input[type="text"]:focus,
 .form-card textarea:focus {
     border-color: #3b82f6;
-    box-shadow: 0 0 8px rgba(59,130,246,0.2);
+    box-shadow: 0 0 6px rgba(59,130,246,0.2);
     outline: none;
 }
-
 .form-card textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 80px;
 }
 
 /* Form Button */
 .form-card button {
     width: 100%;
-    padding: 12px 0;
+    padding: 8px 0;
     background-color: #3b82f6;
     color: #fff;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
 .form-card button:hover {
     background-color: #2563eb;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
 /* ===== Posts Container ===== */
 .posts-container {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 12px; /* espacement réduit entre les posts */
 }
 
 /* ===== Post Card ===== */
 .post-card {
     background-color: #fff;
-    padding: 20px 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    padding: 14px 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .post-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.12);
 }
 
 /* Post Title & Content */
 .post-title {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     color: #111827;
 }
-
 .post-content {
-    font-size: 16px;
+    font-size: 14px;
     color: #374151;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 /* Likes */
 .likes {
-    font-size: 14px;
+    font-size: 12px;
     color: black;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 /* Buttons inside posts */
@@ -146,14 +136,14 @@ h2 {
 .delete-btn,
 .like-btn {
     display: inline-block;
-    padding: 7px 14px;
-    font-size: 14px;
-    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 6px;
     font-weight: 500;
     text-decoration: none;
     cursor: pointer;
     border: none;
-    margin-right: 6px;
+    margin-right: 4px;
     transition: all 0.3s ease;
 }
 
@@ -165,7 +155,7 @@ h2 {
 .update-btn:hover {
     background-color: #eab308;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 
 /* Delete Button */
@@ -176,7 +166,7 @@ h2 {
 .delete-btn:hover {
     background-color: #dc2626;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 
 /* Like / Unlike Button */
@@ -187,7 +177,7 @@ h2 {
 .like-btn:hover {
     background-color: #2563eb;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 </style>
 
