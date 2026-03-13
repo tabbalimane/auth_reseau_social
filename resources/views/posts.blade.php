@@ -1,107 +1,144 @@
-<style>::after/* ===== Body ===== */
+<style>/* ===== Body ===== */
+/* ===== Body ===== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f6f8;
     color: #1f2937;
     margin: 0;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
 /* ===== Logout Button ===== */
 .logout-btn {
     display: inline-block;
-    margin-bottom: 20px;
-    padding: 8px 15px;
+    margin-bottom: 25px;
+    padding: 10px 18px;
     background-color: #ef4444;
     color: #fff;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: bold;
-    transition: background 0.3s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
 }
+
 .logout-btn:hover {
     background-color: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
 /* ===== Headings ===== */
 h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     color: #111827;
-    font-size: 26px;
+    font-size: 28px;
+    text-align: center;
 }
 
 /* ===== Form Card ===== */
 .form-card {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    margin-bottom: 30px;
+    padding: 25px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom: 35px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.form-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Inputs & Textarea */
 .form-card input[type="text"],
 .form-card textarea {
     width: 100%;
-    padding: 10px 12px;
-    margin-bottom: 15px;
+    padding: 12px 14px;
+    margin-bottom: 18px;
     border: 1px solid #d1d5db;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 16px;
+    color: #1f2937;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-card input[type="text"]:focus,
+.form-card textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 8px rgba(59,130,246,0.2);
+    outline: none;
 }
 
 .form-card textarea {
     resize: vertical;
-    min-height: 80px;
+    min-height: 100px;
 }
 
+/* Form Button */
 .form-card button {
+    width: 100%;
+    padding: 12px 0;
     background-color: #3b82f6;
     color: #fff;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 6px;
     font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
 }
+
 .form-card button:hover {
     background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
 }
 
 /* ===== Posts Container ===== */
 .posts-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
 }
 
 /* ===== Post Card ===== */
 .post-card {
     background-color: #fff;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
-    position: relative;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
 /* Post Title & Content */
 .post-title {
     font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 8px;
+    font-weight: 600;
+    margin-bottom: 10px;
     color: #111827;
 }
+
 .post-content {
     font-size: 16px;
     color: #374151;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 /* Likes */
 .likes {
     font-size: 14px;
     color: #ef4444;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 /* Buttons inside posts */
@@ -109,15 +146,15 @@ h2 {
 .delete-btn,
 .like-btn {
     display: inline-block;
-    padding: 6px 12px;
+    padding: 7px 14px;
     font-size: 14px;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: 500;
     text-decoration: none;
     cursor: pointer;
     border: none;
-    margin-right: 5px;
-    transition: all 0.2s;
+    margin-right: 6px;
+    transition: all 0.3s ease;
 }
 
 /* Update Button */
@@ -127,6 +164,8 @@ h2 {
 }
 .update-btn:hover {
     background-color: #eab308;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 /* Delete Button */
@@ -136,6 +175,8 @@ h2 {
 }
 .delete-btn:hover {
     background-color: #dc2626;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 /* Like / Unlike Button */
@@ -145,6 +186,8 @@ h2 {
 }
 .like-btn:hover {
     background-color: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 </style>
 
