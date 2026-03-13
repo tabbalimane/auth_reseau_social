@@ -137,7 +137,7 @@ h2 {
 /* Likes */
 .likes {
     font-size: 14px;
-    color: #ef4444;
+    color: black;
     margin-bottom: 12px;
 }
 
