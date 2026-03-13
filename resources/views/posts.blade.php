@@ -1,100 +1,27 @@
-
-<style>/* ====== Body & Fonts ====== */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f8;
-    color: #333;
-    margin: 0;
-    padding: 20px;
+<style>
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#f4f4f4;
+    margin:0;
+    padding:20px;
 }
-
-/* ====== Formulaire Create Post ====== */
-form {
-    background: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-form input[type="text"],
-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: border 0.3s;
-}
-
-form input[type="text"]:focus,
-form textarea:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-/* ====== Buttons ====== */
-button {
-    padding: 10px 18px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
-}
-
-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.03);
-}
-
-button:disabled {
-    background-color: #aaa;
-    cursor: not-allowed;
-}
-
-/* ====== Post Card ====== */
-.post-card {
-    background: #fff;
-    padding: 18px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.post-card h3 {
-    margin-top: 0;
-    color: #007bff;
-}
-
-.post-card p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-/* ====== Likes ====== */
-.like-section {
-    margin-top: 10px;
-}
-
-.like-section p {
-    font-weight: bold;
-    display: inline-block;
-    margin-right: 10px;
-}
-a{
-       padding: 10px 18px;
-    background-color: #ff0080;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
-}</style>
+h2{text-align:center;color:#333;margin-bottom:20px;}
+a{display:inline-block;margin-bottom:20px;background:#ff4d6d;color:white;padding:8px 15px;border-radius:6px;text-decoration:none;}
+a:hover{background:#e6395c;}
+.form-card{width:400px;margin:auto;background:white;padding:25px;border-radius:10px;display:flex;flex-direction:column;gap:15px;box-shadow:0 10px 25px rgba(0,0,0,0.2);}
+input, textarea{padding:12px;border:2px solid #ddd;border-radius:8px;font-size:15px;}
+input:focus, textarea:focus{border-color:#764ba2;outline:none;}
+button{padding:12px;background:#764ba2;color:white;border:none;border-radius:8px;cursor:pointer;}
+button:hover{background:#5a3a8c;}
+button:disabled{background:gray;cursor:not-allowed;}
+.post-card{background:white;padding:20px;margin:20px auto;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,0.15);}
+.post-card h3{margin-top:0;color:#764ba2;}
+.post-card p{line-height:1.6;}
+.post-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;}
+.post-actions a, .post-actions button{text-decoration:none;padding:6px 12px;border-radius:6px;font-size:14px;transition:0.3s;}
+.post-actions a{background:#ff4d6d;color:white;}
+.post-actions a:hover{background:#e6395c;}
+</style>
 
 <h2>Create Post</h2>
 <a href="/logout">Logout</a>

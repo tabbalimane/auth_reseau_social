@@ -1,78 +1,55 @@
-
-
-
-<style>body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+<style>
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background: white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
 }
-
-/* Container li fih h2 w form */
-.login-container {
-    text-align: center;
+h2{
+    text-align:center;
+    color:white;
+    margin-bottom:20px;
 }
-
-
-
-
-/* Form card */
-form {
-    background-color: #fff;
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    width: 320px;
-    margin: 0 auto; /* center form */
+.form-card{
+    width:350px;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
-
-/* Inputs */
-form input[type="email"],
-form input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 18px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 15px;
-    transition: border 0.3s;
+input, textarea{
+    padding:12px;
+    border:2px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
 }
-
-form input[type="email"]:focus,
-form input[type="password"]:focus {
-    border-color: #007bff;
-    outline: none;
+input:focus, textarea:focus{
+    border-color:#764ba2;
+    outline:none;
 }
-
-/* Button */
-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.1s;
+button{
+    padding:12px;
+    background:#764ba2;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
 }
-
-form button:hover {
-    background-color: #0056b3;
-    transform: scale(1.03);
+button:hover{
+    background:#5a3a8c;
 }
-
-/* Error message */
-form p.error {
-    color: red;
-    text-align: center;
-    margin-top: 10px;
-    font-weight: bold;
-}</style>
-
+.error{
+    color:red;
+    font-weight:bold;
+    text-align:center;
+}
+</style>
 <form method="POST" action="/login">
 
 @csrf
@@ -82,5 +59,6 @@ form p.error {
 <input type="password" name="password" placeholder="password">
 
 <button type="submit">Login</button>
+<a href="/register" >register</a>
 
 </form>
