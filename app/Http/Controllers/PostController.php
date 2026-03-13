@@ -74,13 +74,25 @@ public function destroy(Post $post)
 }
 
     public function like(Post $post)
-    {
-        Like::create([
-            'user_id'=>session('user_id'),
-            'post_id'=>$post->id
-        ]);
+{
+    $user_id = session('user_id');
 
-        return response()->json(['success'=>true]);
+    $like = Like::where('post_id', $post->id)
+                ->where('user_id', $user_id)
+                ->first();
+
+    if($like){
+        // unlike
+        $like->delete();
+    }else{
+        // like
+        Like::create([
+            'post_id'=>$post->id,
+            'user_id'=>$user_id
+        ]);
     }
+
+    return redirect()->back();
+}
 
 }
