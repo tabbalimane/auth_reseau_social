@@ -1,49 +1,51 @@
 <style>
-body{
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    margin:0;
+/* ===== Register Form ===== */
+form {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-h2{text-align:center;color:white;margin-bottom:20px;}
-.form-card{
-    width:350px;
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+
+/* Inputs */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #1f2937;
 }
-input, textarea{
-    padding:12px;
-    border:2px solid #ddd;
-    border-radius:8px;
-    font-size:15px;
+
+/* Submit Button */
+form button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #10b981; /* vert register */
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
-input:focus, textarea:focus{
-    border-color:#ff758c;
-    outline:none;
+
+form button:hover {
+    background-color: #059669;
 }
-button{
-    padding:12px;
-    background:#ff758c;
-    color:white;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-}
-button:hover{
-    background:#e84363;
-}
-.error{
-    color:red;
-    font-weight:bold;
-    text-align:center;
+
+/* Error Messages */
+.error {
+    color: #ef4444; /* rouge pour les erreurs */
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 </style>
 

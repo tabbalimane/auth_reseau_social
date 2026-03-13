@@ -1,71 +1,61 @@
 <style>
-body{
-    font-family: 'Segoe UI', sans-serif;
-    background: white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    margin:0;
+/* ===== Login Form ===== */
+form {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* Inputs */
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #1f2937;
+}
+
+/* Submit Button */
+form button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #3b82f6; /* bleu login */
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #2563eb;
+}
+
+/* Message Under Form */
 .message {
     text-align: center;
     margin-top: 15px;
-    font-size: 15px;
-    color: #333;
+    font-size: 14px;
+    color: #6b7280;
 }
 
 .message a {
-    color: #764ba2;
-    font-weight: bold;
+    color: #3b82f6;
     text-decoration: none;
-    transition: 0.3s;
+    font-weight: 500;
 }
 
 .message a:hover {
-    color: #5a3a8c;
     text-decoration: underline;
-}
-h2{
-    text-align:center;
-    color:white;
-    margin-bottom:20px;
-}
-.form-card{
-    width:350px;
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
-}
-input, textarea{
-    padding:12px;
-    border:2px solid #ddd;
-    border-radius:8px;
-    font-size:15px;
-}
-input:focus, textarea:focus{
-    border-color:#764ba2;
-    outline:none;
-}
-button{
-    padding:12px;
-    background:#764ba2;
-    color:white;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-}
-button:hover{
-    background:#5a3a8c;
-}
-.error{
-    color:red;
-    font-weight:bold;
-    text-align:center;
 }
 </style>
 <form method="POST" action="/login">
