@@ -6,12 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Like;
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests; // <--- hna
 
 class PostController extends Controller
 {
-    use AuthorizesRequests; // <--- hna
 
     public function index()
     {
